@@ -1,0 +1,1355 @@
+<html lang="en">
+
+<head>
+    <style>
+        .logo {
+            width: auto;
+            height: 40px;
+        }
+
+        .footer {
+            background-color: #1C2B3B;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin: 0 auto;
+            gap: 20px;
+        }
+
+        /* Default: Desktop Layout (One Row) */
+        .footerRow {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: auto;
+            flex-wrap: wrap;
+            gap: 20px;
+            /* Reduce the gap between the two divs in the second row */
+        }
+
+        .footerRow2 {
+            display: flex;
+            align-items: center;
+            width: auto;
+            flex-wrap: nowrap;
+            gap: 20px;
+            text-wrap: nowrap;
+            color: #A2A5A8 !important;
+
+            .footerLinks {
+                display: flex;
+                gap: 10px 20px;
+                flex-wrap: nowrap;
+            }
+
+            .footerLink {
+                color: #82B4FB;
+                font-family: Inter, Arial, Helvetica;
+                font-size: 16px;
+                line-height: 18px;
+                text-decoration: none;
+                text-wrap: nowrap;
+                text-decoration: noee;
+
+            }
+
+            .footerLink:hover {
+                transition: 0;
+                color: white !important;
+                text-decoration: underline !important;
+            }
+
+            .copyright {
+                margin: 0;
+                text-align: right;
+                text-wrap: wrap;
+            }
+        }
+
+        .col {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Fix: Group Logo & Address Together */
+        .left-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Controls spacing between logo & address */
+            flex-shrink: 0;
+            /* Prevents unwanted stretching */
+            width: auto;
+        }
+
+        .left {
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .right {
+            justify-content: flex-end;
+
+        }
+
+        .footerLogo {
+            height: 25px;
+        }
+
+        .footerAddress {
+            font-size: 16px;
+            line-height: 18px;
+            text-align: left;
+            color: #A2A5A8;
+            margin-top: 0;
+            margin-bottom: 0;
+            width: auto;
+            text-wrap: wrap;
+        }
+
+        @media (max-width: 1100px) {
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                /* Stack rows properly */
+                align-items: center;
+                flex-wrap: nowrap;
+                margin: 0 auto;
+            }
+
+            .footer-container {
+                display: flex;
+                flex-direction: row;
+                align-items: stretch;
+                gap: 20px;
+            }
+
+            /* First Row: Logo (Left) | Address (Right) */
+            .footerRow {
+                display: flex;
+                justify-content: space-between;
+                flex: 1;
+            }
+
+            .footerRow2 {
+                display: flex;
+                width: 100%;
+                align-items: flex-start;
+
+                .footerLinks {
+                    flex-wrap: wrap;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+
+                .copyright {
+                    text-wrap: wrap;
+                    width: auto;
+                }
+            }
+
+            .left-section {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            /* Second Row: Copyright (Left) | Links (Right) */
+            .col {
+                width: 50%;
+            }
+
+            .right {
+                align-items: flex-end;
+                text-wrap: wrap;
+                flex-direction: column;
+                gap: 10px;
+                justify-content: flex-end;
+                flex: 2;
+            }
+        }
+
+        /* Tablet (≤ 768px): Two Rows */
+        @media (max-width: 768px) {
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                /* Stack rows properly */
+                align-items: center;
+                flex-wrap: nowrap;
+                margin: 0 auto;
+            }
+
+            .footer-container {
+                display: flex;
+            }
+
+            /* First Row: Logo (Left) | Address (Right) */
+            .footerRow {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                width: 100%;
+            }
+
+            .footerRow2 {
+                display: flex;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                width: 100%;
+                text-wrap: wrap;
+                flex: 2;
+            }
+
+            .left-section {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* Second Row: Copyright (Left) | Links (Right) */
+            .col {
+                width: 50%;
+            }
+
+            .right {
+                /*! justify-content: flex-end; */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .logo {
+                width: auto;
+                height: 40px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .list-group {
+                flex-direction: column;
+            }
+
+        }
+
+        /* Mobile (≤ 480px): Stack Everything Centered */
+        @media (max-width: 480px) {
+            .footer-container {
+                align-items: center;
+            }
+
+            .footer-container {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                /* Stack rows properly */
+                align-items: center;
+                flex-wrap: nowrap;
+                margin: 0 auto;
+                gap: 20px;
+            }
+
+            .footerAddress {
+                font-size: 16px;
+                line-height: 18px;
+                text-align: center;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .footerRow {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+            }
+
+            .footerRow2 {
+                flex-direction: column-reverse;
+                align-items: center;
+                text-align: center;
+                width: 100%;
+
+                .footerLinks {
+                    justify-content: center;
+                    gap: 10px 20px;
+                }
+            }
+
+            .col {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .left-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .right {
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+    </style>
+
+
+
+    <meta name="ROBOTS" content="INDEX,FOLLOW">
+    <meta name="keywords" content="">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Wheels Licence and Title Validation
+    </title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link href="https://cdn.datatables.net/1.13.3/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet"
+        type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs5.min.css"
+        integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cloud.e.wheels.com/index.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css"
+        rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Inter" rel="stylesheet" type="text/css">
+    <style>
+        .container {
+            width: 100vw;
+            flex: auto;
+            max-width: none;
+            padding: 0;
+            height: auto;
+        }
+
+        .row {
+            margin: 0 !important;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .text-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            p {
+                margin: 0 !important;
+            }
+
+        }
+
+        .yourDetails {
+            margin: 0 !important;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            h5 {
+                margin: 0 !important;
+            }
+
+            order: initial;
+        }
+
+        .form-section {
+            background-color: #F8F8F9;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            color: #1C2B3B;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            width: 100%;
+            padding: 0;
+            flex: auto;
+            max-width: none;
+            gap: 20px;
+        }
+
+        body {
+            background-color: #F8F8F9;
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            color: #1C2B3B;
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            justify-content: flex-start;
+            overflow-x: hidden;
+        }
+
+        h2 {
+            color: #1C2B3B;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 145%;
+            /* 34.8px */
+            margin: 0;
+        }
+
+        .header {
+            height: 70px;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .mt-5 {
+            margin: 0 !important;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        form {
+            padding: 0 !important;
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .mb-3,
+            .mb-4,
+            .row {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+                margin: 0;
+
+                label {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                input:not(input[type="radio"]),
+                select {
+                    height: 50px;
+                    background-size: 20px;
+                    border-radius: 5px;
+                    color: #1C2B3B;
+                    padding: 10px;
+                    width: 100%;
+                    border-color: #727578;
+
+                    &:hover {
+                        border-radius: 5px;
+                        border: 1px solid #1D57A6;
+                        background-color: #F7FBFF;
+                        cursor: pointer;
+                        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+                    }
+
+                    &:focus {
+                        border-radius: 5px;
+                        border: 1px solid #193967;
+                        background: #E8F0FC;
+
+                        /* input-focus */
+                        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+                    }
+                }
+            }
+
+            .row {
+                padding-top: 0;
+                flex-direction: column;
+                gap: 10px;
+                width: 100%;
+
+                label {
+                    padding: 0;
+                    max-width: 100%;
+                    flex: auto;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+
+                .col-8 {
+                    padding: 0;
+                    max-width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex: auto;
+                    justify-content: flex-start;
+                    gap: 20px;
+
+                    .custom-control {
+                        gap: 10px;
+                        padding: 0;
+                    }
+                }
+            }
+
+            input[type="radio"] {
+                color: #1D57A6;
+                border-color: #1D57A6;
+                accent-color: #1D57A6;
+                width: 25px;
+                height: 25px;
+                margin: 0;
+
+                &:hover {
+                    border-radius: 5px;
+                    border: 1px solid #1D57A6;
+                    background-color: #1D57A6;
+                    cursor: pointer;
+                    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+                    accent-color: #1D57A6;
+                }
+            }
+
+            hr {
+                display: none !important;
+            }
+
+        }
+
+        .form-group {
+            padding: 0 !important;
+            width: 100%;
+        }
+
+        .form-select {
+            height: 50px;
+            background-size: 20px;
+            color: #1C2B3B;
+            padding: 10px;
+            width: 100%;
+            border-color: #727578;
+
+            &:hover {
+                border-radius: 5px;
+                border: 1px solid #1D57A6;
+                background-color: #F7FBFF;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            }
+
+            &:focus {
+                border-radius: 5px;
+                border: 1px solid #193967;
+                background: #E8F0FC;
+
+                /* input-focus */
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+            }
+        }
+        .notification-inline {
+                    display: flex;
+                    flex-direction: row;
+                    gap: 15px;
+                    align-items: flex-start;
+                    margin: 10px 0 0;
+                    width: 100%;
+                    /* padding: 15px 25px 15px 20px; */
+                    /* border-radius: 10px; */
+                    /* background: #E8EBED; */
+                    svg {
+                        margin-top: 10px;
+                        min-width: 30px;
+                        height: 30px;
+                    }
+                    .notification-content {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 5px;
+                    }
+                    .subhead {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+                    .support {
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 145%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 2px;
+                    }
+                }
+        .list-group {
+            display: flex;
+            flex-direction: row;
+            background: none;
+            font-size: 14px;
+            margin: 0 !important;
+            border-right: 1px solid #E8EBED !important;
+            border-top: 1px solid #E8EBED !important;
+            border-bottom: 1px solid #E8EBED !important;
+            gap: 0;
+            
+            .list-group-item {
+                border-radius: 0;
+                flex-direction: column;
+                /* background: white; */
+                border: none !important;
+                border-left: 1px solid #E8EBED !important;
+
+                padding: 5px;
+                width: 100%;
+
+                h5 {
+                    margin-bottom: 0 !important;
+                }
+
+                h6 {
+                    color: #1C2B3B;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+
+                .text-muted {
+                    color: #3B434D !important;
+                    background: #E8EBED;
+                    padding: 1px 3px;
+
+                }
+                
+                .text-warning {
+                    color: #D87810 !important;
+                    background: #F9EEE6;
+                    padding: 1px 3px;
+                }
+
+                .text-critical {
+                    color: #CA0909 !important;
+                    background: #F7E7E7;
+                    padding: 1px 3px;
+                }
+
+                .text-success {
+                    color: #1F8554 !important;
+                    background: #E2F6ED;
+                    padding: 1px 3px;
+
+                }
+            }
+
+            border-radius: 0;
+            border: none;
+        }
+
+        .row {
+
+            h4,
+            h5 {
+                margin: 0 !important;
+                font-size: 20px;
+                font-weight: 500;
+            }
+            .d-flex {
+                gap: 10px;
+            }
+        }
+        .badge-pill {
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #1C2B3B;
+            background: #E8F0FC;
+            border: 1px solid #1D57A6;
+        }
+
+        .subhead {
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            color: #1C2B3B;
+            font-weight: 600;
+            margin: 0 !important;
+
+        }
+
+        .btnPrimary {
+            display: inline-block;
+            border-radius: 25px;
+            background: #1D57A6;
+            color: white;
+            font-family: Inter, Arial, Helvetica;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            margin: 0 0 0 !important;
+            padding: 10px 40px;
+            text-decoration: none;
+            text-transform: none;
+            height: 50px;
+            border-radius: 30px;
+            border: none;
+
+            &:hover {
+                background: #193967;
+                transition: none;
+
+                /* 3 */
+                box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+            }
+
+            width: auto !important;
+        }
+
+        .btnSecondary {
+            display: inline-block;
+            background: white;
+            color: #1D57A6;
+            font-family: Inter, Arial, Helvetica;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 28px;
+            margin: 10px 0 0 !important;
+
+            text-decoration: none;
+            text-transform: none;
+            padding: 10px 40px;
+            height: 50px;
+
+            border-radius: 30px;
+            border: 1px solid #1D57A6;
+
+            &:hover {
+                border: 1px solid #193967;
+                background: #E8F0FC;
+
+                /* 3 */
+                box-shadow: 0px 4px 8px 3px rgba(0, 0, 0, 0.15), 0px 1px 3px 0px rgba(0, 0, 0, 0.30);
+            }
+        }
+
+        input[type="checkbox"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            appearance: none;
+            -webkit-appearance: none;
+            width: 25px;
+            height: 25px;
+            margin-right: 15px;
+            /* Reduced space between label and radio button */
+            vertical-align: middle;
+            border: 2px solid #1D57A6;
+            border-radius: 3px;
+            /* This makes the radio button square */
+            background-color: white;
+            cursor: pointer;
+            position: relative;
+            margin-right: 5px;
+        }
+
+        input[type="text"] {
+            display: flex;
+            justify-content: center;
+            min-width: 100%;
+            max-width: 100%;
+            height: 30px;
+            border: 2px solid #1D57A6;
+            border-radius: 3px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        textarea {
+            display: flex;
+            border: 2px solid #1D57A6;
+            border-radius: 3px;
+            width: 100%;
+            height: 150px;
+        }
+
+        input[type="date"] {
+            display: flex;
+            justify-content: center;
+            min-width: 15vw;
+            height: 30px;
+            border: 2px solid #1D57A6;
+            border-radius: 3px;
+        }
+
+        input[type="radio"] {
+            accent-color: #1D57A6;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        input[type="checkbox"]:checked {
+            background-color: #1D57A6;
+            border-color: #1D57A6;
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        input[type="checkbox"]:checked::before {
+            content: 'X';
+            color: white;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            /* Ensures the checkmark covers the full checkbox */
+            height: 100%;
+            /* Ensures the checkmark covers the full checkbox */
+        }
+        #requiredDocs {
+            h6 {
+                padding: 0;
+                margin-bottom: 0;
+                max-width: 100%;
+                flex: auto;
+                font-weight: 500;
+                font-size: 14px;
+            }
+            font-size: 12px;
+        }
+        /* Disabled state styles */
+        input[type="checkbox"]:disabled {
+            background-color: #1D57A6;
+            border-color: #1D57A6;
+            cursor: not-allowed;
+        }
+
+        input[type="checkbox"]:disabled:checked {
+            background-color: #1D57A6;
+        }
+
+        /* Error state styles */
+        .error input[type="checkbox"] {
+            border-color: #CA0909;
+        }
+
+        .error input[type="checkbox"]:checked {
+            background-color: #CA0909;
+            border-color: #CA0909;
+        }
+
+        .error-text {
+            color: #CA0909;
+            font-size: 0.875em;
+            margin-top: 2px;
+            margin-left: 27px;
+            /* Adjust if needed to align properly */
+        }
+
+        table tr {
+            margin-bottom: 20px;
+            /* Adjust spacing as needed */
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: #1C2B3B
+        }
+
+        @media (max-width: 600px) {
+            .list-group {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+    <style>
+        :is([id*='google_ads_iframe'], [id*='taboola-'], .taboolaHeight, .taboola-placeholder, #top-ad, #credential_picker_container, #credentials-picker-container, #credential_picker_iframe, [id*='google-one-tap-iframe'], #google-one-tap-popup-container, .google-one-tap__module, .google-one-tap-modal-div, #amp_floatingAdDiv, #ez-content-blocker-container) {
+            display: none !important;
+            min-height: 0 !important;
+            height: 0 !important;
+        }
+    </style>
+</head>
+
+<body data-new-gr-c-s-check-loaded="8.927.0" data-gr-ext-installed="">
+    <div class="container" style="margin-left: 0px; margin-top: 0px; ">
+        <div class="row">
+            <div class="col-lg-12" style="max-width: 800px;padding: 0;">
+                <div class="header">
+                    <img class="logo" alt="Wheels Logo"
+                        src="https://image.e.wheels.com/lib/fe3211737164047b731475/m/1/185ad722-aba5-4b7e-9bd6-2dd2b1e71d47.png">
+                </div>
+                <div style="max-width: 800px;" class="content">
+                    <div id="dialog" title="Alert" hidden="hidden">
+                        <p>Please contact your HR department and your internal Fleet team to update your address. Unless
+                            the address is updated there, we will deliver to the address we have on record.
+                        </p>
+                    </div>
+
+                    <div style="/*! display: flex; */" class="py text-left">
+                        <h2>Registration Renewal Verification
+                        </h2>
+                        <p>Please complete the form below to verify the details for your renewal.
+                        </p>
+                        <div class="notification-inline">
+                            <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM15.0003 9.64C13.857 9.64 12.9303 8.71323 12.9303 7.57C12.9303 6.42677 13.857 5.5 15.0003 5.5C16.1435 5.5 17.0703 6.42677 17.0703 7.57C17.0703 8.71323 16.1435 9.64 15.0003 9.64ZM12.75 22.5648V14.4648C12.75 13.2222 13.7574 12.2148 15 12.2148C16.2426 12.2148 17.25 13.2222 17.25 14.4648V22.5648C17.25 23.8075 16.2426 24.8148 15 24.8148C13.7574 24.8148 12.75 23.8075 12.75 22.5648Z" fill="#3B434D"/>
+                                </svg>
+                                <div class="notification-content">
+                                    <div class="subhead">Before answering please ensure that the checks below are recent and not out of date.</div>
+
+                                    <div class="support">
+                                        <span class="line-one">Failure to provide accurate and up to date information may result in your renewal being delayed.</span>
+                                        <span class="line-two">
+                                            If you are in doubt please check with your state and / or county before submitting.
+                                        </span>
+                                    </div>
+                                </div>
+                        </div>
+                        <p>
+                            
+                        </p>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-md-8 order-md-1 form-section">
+                            <div style="padding: 0;max-width: none;" class="yourDetails col-md-4 order-md-2 mb-4">
+                                <h5 class="d-flex align-items-center mb-3">
+                                    <span class="subhead">Your Details</span>
+                                    <span class="badge badge-secondary badge-pill">badge-pill</span>
+                                </h5>
+                                <ul class="list-group mb-3">
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div style="height: auto;">
+                                            <h6 class="my-0">Document(s) Needed
+                                            </h6>
+                                            <small
+                                                class="text-warning">text warning</small>
+                                        </div>
+                                        <span>text normal</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">VIN
+                                            </h6>
+                                            <small class="text-muted">text muted</small>
+                                        </div>
+                                        <span class="text-muted">text muted</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div>
+                                            <h6 class="my-0">Year, Model
+                                            </h6>
+                                            <small>text normal</small>
+                                        </div>
+                                        <span class="text-critical">text critical</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                        <div class="text-muted">
+                                            <h6 class="my-0">Tag Delivery Address
+                                            </h6>
+                                            <small>small</small>
+                                        </div>
+                                        <span class="text-success">text success</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <form id="lt-form" class="needs-validation"
+                                action="https://cloud.e.wheels.com/lnt_doc_verification_thank_you" method="post"
+                                novalidate="novalidate">
+                                <input value="" name="EmailAddress" type="hidden">
+                                <input type="hidden" value="" name="VIN">
+                                <input type="hidden" value="" name="RenewalReq">
+                                <input type="hidden" value="" name="LicensePlateNum">
+                                <input type="hidden" value="" name="RegExpDate">
+                                <input type="hidden" value="" name="ClientVehicleID">
+                                <input type="hidden" value="" name="VehicleID">
+                                <input type="hidden" value="" name="SF18ID">
+                                <input type="hidden" value="" name="LPUSAPIID">
+                                <input type="hidden" value="" name="ClientNumber">
+                                <input type="hidden" value="" name="ClientName">
+                                <input type="hidden" value="" name="BrandName">
+                                <input type="hidden" value="" name="EmailtoSend">
+                                <div class="row">
+                                    <label class="col-4">Is the registration still needed?</label>
+                                    <div class="col-8">
+                                        <div class="custom-control custom-control-inline">
+                                            <input name="Reg_Needed" id="Reg_Needed_0" type="radio" value="Yes"
+                                                required="">
+                                            <label for="Reg_Needed_0">Yes</label>
+                                        </div>
+                                        <div class="custom-control custom-control-inline">
+                                            <input name="Reg_Needed" id="Reg_Needed_1" type="radio" value="No"
+                                                required="">
+                                            <label for="Reg_Needed_1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3" id="ReasonDIV" style="">
+                                    <label for="Reason" class="col-4 col-form-label">Reason</label>
+                                    <select id="Reason" name="Reason" class="custom-select">
+                                        <option value="0" selected="" disabled="">Please select one</option>
+                                        <option value="AlreadyRegistered">Renewal already done</option>
+                                        <option value="VehicleOffRoad">Vehicle off road</option>
+                                        <option value="DoNotHaveVehicle">Do not have vehicle any more</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3" id="OtherreasonDIV" style="display: none;">
+                                    <label for="Otherreason" class="col-4 col-form-label">Please give a reason</label>
+                                    <textarea id="Otherreason" name="Otherreason"></textarea>
+                                </div>
+                                <div class="mb-3" id="ExpDateDIV" style="display: none;">
+                                    <label for="ExpirationDate">Expiration date of new tag:</label>
+                                    <input id="ExpirationDate" name="ExpirationDate" class="form-control datepicker"
+                                        type="date" data-date-format="yyyy-mm-dd">
+                                </div>
+                                <div class="row" id="DelAddressYN" style="display: none;">
+                                    <label class="col-4">Is the tag delivery address correct?</label>
+                                    <div class="col-8">
+                                        <div class="custom-control custom-control-inline">
+                                            <input name="Delivery_Address" id="Delivery_Address_0" type="radio"
+                                                value="Yes">
+                                            <label for="Delivery_Address_0">Yes</label>
+                                        </div>
+                                        <div class="custom-control custom-control-inline">
+                                            <input name="Delivery_Address" id="Delivery_Address_1" type="radio"
+                                                value="No">
+                                            <label for="Delivery_Address_1">No</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3" id="WarningDIV" style="display: none;">
+                                    <p style="color: #ca0909; font-weight: bold;">Please contact your HR department to
+                                        have your address updated. Unless the address is updated there, we will deliver
+                                        to the address we have on record.
+                                    </p>
+                                </div>
+                                <div class="mb-3" id="DriverAddressLine1DIV" style="display: none;">
+                                    <label for="DriverAddressLine1">Address</label>
+                                    <input id="DriverAddressLine1" name="DriverAddressLine1" type="text">
+                                </div>
+                                <div class="mb-3" id="DriverAddressLine2DIV" style="display: none;">
+                                    <label for="DriverAddressLine2"></label>
+                                    <input id="DriverAddressLine2" name="DriverAddressLine2" type="text">
+                                </div>
+                                <div class="mb-3" id="DriverAddressLine3DIV" style="display: none;">
+                                    <label for="DriverAddressLine3"></label>
+                                    <input id="DriverAddressLine3" name="DriverAddressLine3" type="text">
+                                </div>
+                                <div class="mb-3" id="DriverAddressLine4DIV" style="display: none;">
+                                    <label for="DriverAddressLine4"></label>
+                                    <input id="DriverAddressLine4" name="DriverAddressLine4" type="text">
+                                </div>
+                                <div class="mb-3" id="CityDIV" style="display: none;">
+                                    <label for="City">City</label>
+                                    <input id="City" name="City" type="text">
+                                </div>
+                                <div class="mb-3" id="StateDIV" style="display: none;">
+                                    <label for="State">State</label>
+                                    <input id="State" name="State" type="text">
+                                </div>
+                                <div class="mb-3" id="zipDIV" style="display: none;">
+                                    <label for="Zip">Zip</label>
+                                    <input id="Zip" name="Zip" type="text">
+                                </div>
+                                <div class="mb-3" id="WarningDIV2" style="display: none;">
+                                    <p style="color: #d87810; font-weight: bold;">You must meet all requirements below
+                                        so we can progress your vehicle's registraion renewal. Once you have satisifed
+                                        the requirement please return to this page and verify by clicking "Yes" below.
+                                    </p>
+                                </div>
+                                <div class="mb-3" id="requiredDocs" style="display: none;">
+                                    <h6>Do you have an up-to-date:
+                                    </h6>
+                                    test
+                                    <br>test
+                                    <br>
+
+                                </div>
+                                <hr class="mb-4">
+                                <input class="btnPrimary btn-sm btn-block" type="submit" id="SubmitButton"
+                                    value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Row 1 (Logo & Address stay together) -->
+            <div class="footerRow">
+                <div class="left-section">
+                    <img alt="Logo" class="footerLogo" width="auto"
+                        src="https://imghost.net/ib/nltZEFch0FOd2uD_1739392787.png">
+                    <p class="footerAddress">
+                        666 Garland Place Des Plaines, IL 60016
+                    </p>
+                </div>
+            </div>
+            <!-- Row 2 (Copyright & Links) -->
+            <div class="footerRow2 right">
+                <p class="copyright">© 2024 Wheels Inc. All Rights Reserved.</p>
+                <div class="footerLinks">
+                    <a href="https://www.wheels.com/public/company/about-us/" class="footerLink">
+                        About Wheels
+                    </a>
+                    <a class="footerLink" href="https://www.wheels.com/public/privacy-policy/">
+                        Privacy &amp; Policies
+                    </a>
+                    <a class="footerLink" href="mailto:support@wheels.com">
+                        support@wheels.com
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.3/js/jquery.dataTables.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.8/holder.min.js"
+        integrity="sha512-O6R6IBONpEcZVYJAmSC+20vdsM07uFuGjFf0n/Zthm8sOFW+lAq/OK1WOL8vk93GBDxtMIy6ocbj6lduyeLuqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.0/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }
+                        , false);
+                }
+                );
+            }
+                , false);
+        }
+        )();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $("form").on('submit', function (event) {
+                var today = new Date();
+                if (!isHidden($("#ExpirationDate"))) {
+                    $("#ExpirationDate").attr("required", "required")
+                }
+                else {
+                    $("#ExpirationDate").removeAttr("required")
+                }
+                var minDate = new Date(new Date().setDate(today.getDate() + 90));
+                var maxDate = new Date(new Date().setDate(today.getDate() + 1461));
+                var selDate = new Date($("#ExpirationDate").val());
+                if (minDate.getTime() > selDate.getTime()) {
+                    alert("Expiration Date Must Be 90 Days Into The Future");
+                    $("#ExpirationDate").val("");
+                    $("#ExpirationDate").attr('class', 'form-control datepicker invalid');
+                    event.preventDefault();
+                }
+                else if (maxDate.getTime() < selDate.getTime()) {
+                    alert("Expiration Date Cannot Exceed 4 Years In The Future");
+                    $("#ExpirationDate").val("");
+                    $("#ExpirationDate").attr('class', 'form-control datepicker invalid');
+                    event.preventDefault();
+                }
+            }
+            );
+            function isHidden(el) {
+                return (el.offsetParent === null)
+            }
+            $("#ExpirationDate").datepicker();
+            $("#dialog").dialog({
+                autoOpen: false,
+                buttons: {
+                    OK: function () {
+                        $(this).dialog("close");
+                    }
+                }
+                ,
+                title: "Alert",
+                position: {
+                    my: "left center",
+                    at: "left center"
+                }
+            }
+            );
+        }
+        );
+        $(document).ready(function () {
+            $("#lt-form").validate({
+                errorPlacement: function (error, element) {
+                    if (element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+                        error.appendTo(element.closest('.form-group'));
+                    }
+                    else {
+                        error.insertAfter(element);
+                    }
+                }
+            }
+            );
+            $("#ReasonDIV").hide();
+            $("#OtherreasonDIV").hide();
+            $("#ExpDateDIV").hide();
+            $("#DelAddressYN").hide();
+            $("#DriverAddressLine1DIV").hide();
+            $("#DriverAddressLine1").val("");
+            $("#DriverAddressLine2DIV").hide();
+            $("#DriverAddressLine2").val("");
+            $("#DriverAddressLine3DIV").hide();
+            $("#DriverAddressLine3").val("");
+            $("#DriverAddressLine4DIV").hide();
+            $("#DriverAddressLine4").val("");
+            $("#CityDIV").hide();
+            $("#City").val("");
+            $("#StateDIV").hide();
+            $("#State").val("");
+            $("#zipDIV").hide();
+            $("#Zip").val("");
+            $("#requiredDocs").hide();
+            $("#WarningDIV").hide();
+            $("#WarningDIV2").hide();
+
+            ////Check to see if reg is still needed
+            //If no display reason dropdown
+            $('#Reg_Needed_1').click(function () {
+                if ($('#Reg_Needed_1').is(':checked')) {
+                    $("#Delivery_Address_0").prop('checked', false);
+                    $("#Delivery_Address_1").prop('checked', false);
+                    $("#ReasonDIV").show();
+                    $("#DelAddressYN").hide();
+                    $("#requiredDocs").hide();
+                    $("#WarningDIV2").hide();
+                    $("#WarningDIV").hide();
+                    $("#Delivery_Address_0").prop("required", false);
+                    $("#Delivery_Address_1").prop("required", false);
+
+                }
+            }
+            );
+            // if yes hide all other fields
+            $('#Reg_Needed_0').click(function () {
+                if ($('#Reg_Needed_0').is(':checked')) {
+                    $("#Delivery_Address_0").prop('checked', false);
+                    $("#Delivery_Address_1").prop('checked', false);
+                    $("#DelAddressYN").show();
+                    $("#ReasonDIV").hide();
+                    $("#Reason").val(0);
+                    $("#ExpDateDIV").hide();
+                    $("ExpirationDate").val("");
+                    $("#OtherreasonDIV").hide();
+                    $("#requiredDocs").hide();
+                    $("#DriverAddressLine1DIV").hide();
+                    $("#DriverAddressLine2DIV").hide();
+                    $("#DriverAddressLine3DIV").hide();
+                    $("#DriverAddressLine4DIV").hide();
+                    $("#CityDIV").hide();
+                    $("#StateDIV").hide();
+                    $("#zipDIV").hide();
+                    $("#WarningDIV").hide();
+                    $("#WarningDIV2").hide();
+                    $("#Delivery_Address_0").prop("required", true);
+                    $("#Delivery_Address_1").prop("required", true);
+
+                }
+            }
+            );
+            /////////CHeck reason dropdown
+            $("#Reason").change(function () {
+                if ($(this).val() == "AlreadyRegistered") {
+                    $("#ExpDateDIV").show();
+                    $("ExpirationDate").val("");
+                    $("#OtherreasonDIV").hide();
+                    $("Otherreason").val("");
+                }
+                else if ($(this).val() == "Other") {
+                    $("#OtherreasonDIV").show();
+                    $("#ExpDateDIV").hide();
+                }
+                else {
+                    $("#ExpDateDIV").hide();
+                    $("ExpirationDate").val("");
+                    $("#OtherreasonDIV").hide();
+                    $("Otherreason").val("");
+                }
+            }
+            );
+            ///// address check if yes is clicked
+            $('#Delivery_Address_0').click(function () {
+                if ($('#Delivery_Address_0').is(':checked')) {
+                    $('input[name="RequiredDoc1"]').prop('checked', false);
+                    $("#requiredDocs").show();
+                    $("#DriverAddressLine1DIV").hide();
+                    $("#DriverAddressLine2DIV").hide();
+                    $("#DriverAddressLine3DIV").hide();
+                    $("#DriverAddressLine4DIV").hide();
+                    $("#CityDIV").hide();
+                    $("#StateDIV").hide();
+                    $("#zipDIV").hide();
+                    $("#WarningDIV").hide();
+                    $("#WarningDIV2").hide();
+                }
+            }
+            );
+            ///// if address is correct no is clicked
+            $('#Delivery_Address_1').click(function () {
+                if ($('#Delivery_Address_1').is(':checked')) {
+                    $("#WarningDIV2").hide();
+                    $('input[name="RequiredDoc1"]').prop('checked', false);
+                    $("#WarningDIV").show();
+                    $("#requiredDocs").show();
+                }
+            }
+            );
+        }
+        );
+    </script>
+
+
+
+
+    <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
+
+</body>
+
+</html>
