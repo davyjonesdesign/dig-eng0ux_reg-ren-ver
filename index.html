@@ -380,7 +380,7 @@
             margin: 0;
             display: flex;
             flex-direction: column;
-            overflow: hidden;
+            overflow: visible;
             width: 100%;
             padding: 0;
             flex: auto;
@@ -754,7 +754,7 @@
             margin-right: 15px;
             /* Reduced space between label and radio button */
             vertical-align: middle;
-            border: 2px solid #1D57A6;
+            border: 1px solid #727578;
             border-radius: 3px;
             /* This makes the radio button square */
             background-color: white;
@@ -769,27 +769,91 @@
             min-width: 100%;
             max-width: 100%;
             height: 30px;
-            border: 2px solid #1D57A6;
+            border: 1px solid #727578;
             border-radius: 3px;
             padding-left: 5px;
             padding-right: 5px;
+            height: 50px;
+            background-size: 20px;
+            border-radius: 5px;
+            color: #1C2B3B;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #727578;
+            &:hover {
+                border-radius: 5px;
+                border: 1px solid #1D57A6;
+                background-color: #F7FBFF;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            }
+
+            &:focus {
+                border-radius: 5px;
+                border: 1px solid #193967;
+                background: #E8F0FC;
+
+                /* input-focus */
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+            }
         }
 
         textarea {
             display: flex;
-            border: 2px solid #1D57A6;
+            border: 1px solid #727578;
             border-radius: 3px;
             width: 100%;
             height: 150px;
+            /* height: 50px; */
+            background-size: 20px;
+            border-radius: 5px;
+            color: #1C2B3B;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #727578;
+            &:hover {
+                border-radius: 5px;
+                border: 1px solid #1D57A6;
+                background-color: #F7FBFF;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            }
+
+            &:focus {
+                border-radius: 5px;
+                border: 1px solid #193967;
+                background: #E8F0FC;
+
+                /* input-focus */
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+                outline: none;
+            }
         }
 
         input[type="date"] {
             display: flex;
             justify-content: center;
             min-width: 15vw;
-            height: 30px;
-            border: 2px solid #1D57A6;
-            border-radius: 3px;
+            height: 50px;
+            border: 1px solid #727578;
+            border-radius: 5px;
+            &:hover {
+                border-radius: 5px;
+                border: 1px solid #1D57A6;
+                background-color: #F7FBFF;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            }
+
+            &:focus {
+                border-radius: 5px;
+                border: 1px solid #193967;
+                background: #E8F0FC;
+
+                /* input-focus */
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+                outline: none;
+            }
         }
 
         input[type="radio"] {
@@ -797,6 +861,23 @@
             width: 20px;
             height: 20px;
             margin-right: 5px;
+            &:hover {
+                border-radius: 5px;
+                border: 1px solid #1D57A6;
+                background-color: #F7FBFF;
+                cursor: pointer;
+                box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.30), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+            }
+
+            &:focus {
+                border-radius: 5px;
+                border: 1px solid #193967;
+                background: #E8F0FC;
+
+                /* input-focus */
+                box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
+                outline: none;
+            }
         }
 
         input[type="checkbox"]:checked {
@@ -936,38 +1017,38 @@
                                     <span class="badge badge-secondary badge-pill">badge-pill</span>
                                 </h5>
                                 <ul class="list-group mb-3">
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <li class="list-group-item d-flex  lh-condensed">
                                         <div style="height: auto;">
                                             <h6 class="my-0">Document(s) Needed
                                             </h6>
                                             <small
                                                 class="text-warning">text warning</small>
                                         </div>
-                                        <span>text normal</span>
+                                        <span>document.pdf <br> something-cool.pdf</span>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <li class="list-group-item d-flex  lh-condensed">
                                         <div>
                                             <h6 class="my-0">VIN
                                             </h6>
                                             <small class="text-muted">text muted</small>
                                         </div>
-                                        <span class="text-muted">text muted</span>
+                                        <span>JH4DA9350NS005381</span>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                                    <li class="list-group-item d-flex  lh-condensed">
                                         <div>
                                             <h6 class="my-0">Year, Model
                                             </h6>
-                                            <small>text normal</small>
+                                            <small class="text-critical">Needs Attention</small>
                                         </div>
-                                        <span class="text-critical">text critical</span>
+                                        <span>2016, Audi A4</span>
                                     </li>
-                                    <li class="list-group-item d-flex justify-content-between lh-condensed">
-                                        <div class="text-muted">
+                                    <li class="list-group-item d-flex  lh-condensed">
+                                        <div>
                                             <h6 class="my-0">Tag Delivery Address
                                             </h6>
-                                            <small>small</small>
+                                            <small class="text-success">Confirmed</small>
                                         </div>
-                                        <span class="text-success">text success</span>
+                                        <span>666 Garland Place<br>Des Plaines, IL 60016</span>
                                     </li>
                                 </ul>
                             </div>
