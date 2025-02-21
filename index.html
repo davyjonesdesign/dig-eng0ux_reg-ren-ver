@@ -563,39 +563,45 @@
                 box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.20), 0px 0px 5px 0px rgba(0, 0, 0, 0.10);
             }
         }
+
         .notification-inline {
-                    display: flex;
-                    flex-direction: row;
-                    gap: 15px;
-                    align-items: flex-start;
-                    margin: 10px 0 0;
-                    width: 100%;
-                    /* padding: 15px 25px 15px 20px; */
-                    /* border-radius: 10px; */
-                    /* background: #E8EBED; */
-                    svg {
-                        margin-top: 10px;
-                        min-width: 30px;
-                        height: 30px;
-                    }
-                    .notification-content {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 5px;
-                    }
-                    .subhead {
-                        font-size: 16px;
-                        font-weight: 600;
-                    }
-                    .support {
-                        font-size: 14px;
-                        font-weight: 400;
-                        line-height: 145%;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 2px;
-                    }
-                }
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
+            align-items: flex-start;
+            margin: 10px 0 0;
+            width: 100%;
+
+            /* padding: 15px 25px 15px 20px; */
+            /* border-radius: 10px; */
+            /* background: #E8EBED; */
+            svg {
+                margin-top: 10px;
+                min-width: 30px;
+                height: 30px;
+            }
+
+            .notification-content {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+            }
+
+            .subhead {
+                font-size: 16px;
+                font-weight: 600;
+            }
+
+            .support {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 145%;
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+        }
+
         .list-group {
             display: flex;
             flex-direction: row;
@@ -605,7 +611,7 @@
             border-right: 1px solid #E8EBED !important;
             border-top: 1px solid #E8EBED !important;
             gap: 0;
-            
+
             .list-group-item {
                 border-radius: 0;
                 flex-direction: column;
@@ -633,7 +639,7 @@
                     padding: 1px 3px;
 
                 }
-                
+
                 .text-warning {
                     color: #D87810 !important;
                     background: #F9EEE6;
@@ -666,10 +672,12 @@
                 font-size: 20px;
                 font-weight: 500;
             }
+
             .d-flex {
                 gap: 5px;
             }
         }
+
         .badge-pill {
             border-radius: 3px;
             font-size: 12px;
@@ -780,6 +788,7 @@
             padding: 10px;
             width: 100%;
             border: 1px solid #727578;
+
             &:hover {
                 border-radius: 5px;
                 border: 1px solid #1D57A6;
@@ -811,6 +820,7 @@
             padding: 10px;
             width: 100%;
             border: 1px solid #727578;
+
             &:hover {
                 border-radius: 5px;
                 border: 1px solid #1D57A6;
@@ -837,6 +847,7 @@
             height: 50px;
             border: 1px solid #727578;
             border-radius: 5px;
+
             &:hover {
                 border-radius: 5px;
                 border: 1px solid #1D57A6;
@@ -861,6 +872,7 @@
             width: 20px;
             height: 20px;
             margin-right: 5px;
+
             &:hover {
                 border-radius: 5px;
                 border: 1px solid #1D57A6;
@@ -899,6 +911,7 @@
             height: 100%;
             /* Ensures the checkmark covers the full checkbox */
         }
+
         #requiredDocs {
             h6 {
                 padding: 0;
@@ -908,8 +921,10 @@
                 font-weight: 500;
                 font-size: 14px;
             }
+
             font-size: 12px;
         }
+
         /* Disabled state styles */
         input[type="checkbox"]:disabled {
             background-color: #1D57A6;
@@ -991,21 +1006,23 @@
                         </p>
                         <div class="notification-inline">
                             <svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM15.0003 9.64C13.857 9.64 12.9303 8.71323 12.9303 7.57C12.9303 6.42677 13.857 5.5 15.0003 5.5C16.1435 5.5 17.0703 6.42677 17.0703 7.57C17.0703 8.71323 16.1435 9.64 15.0003 9.64ZM12.75 22.5648V14.4648C12.75 13.2222 13.7574 12.2148 15 12.2148C16.2426 12.2148 17.25 13.2222 17.25 14.4648V22.5648C17.25 23.8075 16.2426 24.8148 15 24.8148C13.7574 24.8148 12.75 23.8075 12.75 22.5648Z" fill="#3B434D"/>
-                                </svg>
-                                <div class="notification-content">
-                                    <div class="subhead">Before answering please ensure that the checks below are recent and not out of date.</div>
+                                <path
+                                    d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71573 0 0 6.71573 0 15C0 23.2843 6.71573 30 15 30ZM15.0003 9.64C13.857 9.64 12.9303 8.71323 12.9303 7.57C12.9303 6.42677 13.857 5.5 15.0003 5.5C16.1435 5.5 17.0703 6.42677 17.0703 7.57C17.0703 8.71323 16.1435 9.64 15.0003 9.64ZM12.75 22.5648V14.4648C12.75 13.2222 13.7574 12.2148 15 12.2148C16.2426 12.2148 17.25 13.2222 17.25 14.4648V22.5648C17.25 23.8075 16.2426 24.8148 15 24.8148C13.7574 24.8148 12.75 23.8075 12.75 22.5648Z"
+                                    fill="#3B434D" />
+                            </svg>
+                            <div class="notification-content">
+                                <div class="subhead">Before answering please ensure that the checks below are recent and
+                                    not out of date.</div>
 
-                                    <div class="support">
-                                        <span class="line-one">Failure to provide accurate and up to date information may result in your renewal being delayed.</span>
-                                        <span class="line-two">
-                                            If you are in doubt please check with your state and / or county before submitting.
-                                        </span>
-                                    </div>
+                                <div class="support">
+                                    <span class="line-one">Failure to provide accurate and up to date information may
+                                        result in your renewal being delayed. If you are in doubt please check with your
+                                        state and / or county before submitting.</span>
                                 </div>
+                            </div>
                         </div>
                         <p>
-                            
+
                         </p>
                     </div>
                     <div class="row">
@@ -1021,8 +1038,7 @@
                                         <div style="height: auto;">
                                             <h6 class="my-0">Document(s) Needed
                                             </h6>
-                                            <small
-                                                class="text-warning">text warning</small>
+                                            <small class="text-warning">text warning</small>
                                         </div>
                                         <span>document.pdf <br> something-cool.pdf</span>
                                     </li>
@@ -1153,7 +1169,7 @@
                                 </div>
                                 <div class="mb-3" id="WarningDIV2" style="display: none;">
                                     <p style="color: #d87810; font-weight: bold;">You must meet all requirements below
-                                        so we can progress your vehicle's registraion renewal. Once you have satisifed
+                                        so we can progress your vehicle's registration renewal. Once you have satisfied
                                         the requirement please return to this page and verify by clicking "Yes" below.
                                     </p>
                                 </div>
